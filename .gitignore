@@ -13,9 +13,6 @@
 # ChromaDB vector store (usually large and can be regenerated)
 vectorstore/
 
-# Data directory (consider if you want to exclude all or part of it)
-data/
-
 # macOS system files
 .DS_Store
 
