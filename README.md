@@ -1,4 +1,4 @@
-# Llama3.2-1b Job Email Generator
+# LlamaMail: AI-Powered Job Application Assistant
 
 ## 📌 Overview
 
