@@ -1,0 +1,37 @@
+# Python virtual environment
+.venv/
+
+# PyCharm IDE settings
+.idea/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Jupyter Notebooks (optional, depending on whether you want to include them in the repo)
+*.ipynb
+
+# ChromaDB vector store (usually large and can be regenerated)
+vectorstore/
+
+# Data directory (consider if you want to exclude all or part of it)
+data/
+
+# macOS system files
+.DS_Store
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+*.log
+
+# Environment variables file (if you have one)
+.env
+
+# Any other build or temporary files
+*.tmp
+*.bak
+*.swp
