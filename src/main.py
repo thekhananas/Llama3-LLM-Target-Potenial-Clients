@@ -12,7 +12,7 @@ def create_streamlit_app(llm, portfolio, clean_text, clean_and_parse_json):
     st.set_page_config(layout="wide", page_title="AI Cold Email Generator", page_icon="📧")
     load_css()
 
-    st.title("🤖 AI Cold Email Generator")
+    st.title("🤖 AI Personalized Email Generator using Job Listing")
     st.write("Generate personalized cold emails based on job descriptions and your portfolio.")
 
     col1, col2 = st.columns([2, 1])
