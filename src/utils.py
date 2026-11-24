@@ -1,51 +1,68 @@
-import os
 import json
 import re
+from typing import Any
+
 from bs4 import BeautifulSoup
 import streamlit as st
 
-def clean_and_parse_json(text: object) -> object:
-    # Remove Markdown code block syntax
-    text = re.sub(r'```json\s*', '', text)
-    text = re.sub(r'\s*```', '', text)
 
-    # Find the first complete JSON object
-    # This pattern matches balanced curly braces
-    pattern = r'\{(?:[^{}]|\{(?:[^{}]|\{[^{}]*\})*\})*\}'
-    match = re.search(pattern, text, re.DOTALL)
+def clean_and_parse_json(text: Any) -> dict[str, Any] | None:
+    """Extract and validate a structured job posting JSON object from model output."""
+    if not isinstance(text, str):
+        text = str(text)
 
+    # Remove Markdown code block fences
+    cleaned = re.sub(r"```json\s*", "", text, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\s*```", "", cleaned).strip()
+
+    candidates: list[Any] = []
+    # Try parsing the full cleaned payload first (handles JSON arrays cleanly)
+    try:
+        candidates.append(json.loads(cleaned))
+    except json.JSONDecodeError:
+        pass
+
+    # Fallback: extract first balanced JSON object
+    pattern = r"\{(?:[^{}]|\{(?:[^{}]|\{[^{}]*\})*\})*\}"
+    match = re.search(pattern, cleaned, re.DOTALL)
     if match:
-        json_str = match.group(0)
         try:
-            parsed = json.loads(json_str)
-            # Ensure we have a complete job listing
-            if all(key in parsed for key in ['role', 'experience', 'skills', 'description']):
-                return parsed
+            candidates.append(json.loads(match.group(0)))
         except json.JSONDecodeError:
             pass
+
+    for item in candidates:
+        obj = item[0] if isinstance(item, list) and item else item
+        if isinstance(obj, dict) and all(
+            key in obj for key in ("role", "experience", "skills", "description")
+        ):
+            skills = obj.get("skills")
+            if isinstance(skills, str):
+                obj["skills"] = [s.strip() for s in skills.split(",") if s.strip()]
+            elif isinstance(skills, list):
+                obj["skills"] = [str(s).strip() for s in skills if str(s).strip()]
+            else:
+                obj["skills"] = []
+            return obj
+
     return None
 
-def clean_text(text):
-    # Remove HTML tags
+
+def clean_text(text: str) -> str:
+    """Strip HTML markup, non-printable characters, and excessive whitespace."""
     soup = BeautifulSoup(text, "html.parser")
-    text = soup.get_text()
+    plain = soup.get_text()
+    plain = "".join(char for char in plain if char.isprintable())
+    return re.sub(r"\s+", " ", plain).strip()
 
-    # Remove non-printable characters
-    text = ''.join(char for char in text if char.isprintable())
 
-    # Remove excessive whitespace and newlines
-    text = re.sub(r'\s+', ' ', text).strip()
-
-    return text
-
-def clean_email_text(text):
-    # Remove extra newlines and spaces
-    cleaned = ' '.join(text.split())
-    # Add proper line breaks for email formatting
-    cleaned = cleaned.replace('Subject:', '\nSubject:')
-    cleaned = cleaned.replace('Dear', '\n\nDear')
-    cleaned = cleaned.replace('Best regards,', '\n\nBest regards,')
-    return cleaned
+def clean_email_text(text: str) -> str:
+    """Normalize whitespace and enforce clean line breaks around email sections."""
+    cleaned = " ".join(text.split())
+    cleaned = cleaned.replace("Subject:", "\nSubject:")
+    cleaned = re.sub(r"\s+(Dear\b)", r"\n\n\1", cleaned)
+    cleaned = re.sub(r"\s+(Best regards,|Sincerely,|Warm regards,|Regards,)", r"\n\n\1", cleaned)
+    return cleaned.strip()
 
 
 def load_css():
