@@ -1,0 +1,136 @@
+[
+  {
+    "test_id": "eval_01",
+    "title": "Senior Full-Stack Engineer (B2B Commerce)",
+    "job_text": "We are hiring a Senior Full-Stack Engineer with 4+ years of experience to scale our B2B wholesale marketplace. You will build responsive single-page interfaces in React and TypeScript, design REST and WebSocket APIs with Node.js and Express, and manage high-volume product catalogs in MongoDB replica sets with atomic checkout transactions.",
+    "query_skills": ["React", "TypeScript", "Node.js", "Express", "MongoDB", "WebSockets"],
+    "relevant_doc_ids": ["doc_01_fullstack_mern"],
+    "relevant_links": ["https://www.toptal.com/portfolio"]
+  },
+  {
+    "test_id": "eval_02",
+    "title": "Backend Python & FinTech Platform Engineer",
+    "job_text": "Seeking a Backend Python Engineer (5 years experience) to own our financial reconciliation APIs and asynchronous invoicing workers. Tech stack includes Python, Django REST Framework, PostgreSQL with read replicas and row-level locking, Redis caching, and Celery distributed task queues.",
+    "query_skills": ["Python", "Django", "Django REST Framework", "PostgreSQL", "Redis", "Celery"],
+    "relevant_doc_ids": ["doc_02_python_django_backend"],
+    "relevant_links": ["https://www.thoughtworks.com/clients"]
+  },
+  {
+    "test_id": "eval_03",
+    "title": "Lead Frontend & GraphQL Portal Engineer",
+    "job_text": "Join our enterprise platform group to build a multi-tenant operational analytics portal. Required experience: 4+ years with Angular, strict TypeScript, RxJS reactive state management, GraphQL API federation/aggregation, and Firebase Authentication and Cloud Messaging for real-time notifications.",
+    "query_skills": ["Angular", "TypeScript", "RxJS", "GraphQL", "Firebase"],
+    "relevant_doc_ids": ["doc_03_angular_graphql_saas"],
+    "relevant_links": ["https://www.epam.com/our-work"]
+  },
+  {
+    "test_id": "eval_04",
+    "title": "Full-Stack SaaS Billing & DevOps Developer",
+    "job_text": "We need a Full-Stack Engineer (3+ years experience) to modernize our B2B SaaS subscription and billing platform. You will work across Vue.js with Pinia state management, modular Laravel PHP APIs, MySQL transactional storage, Nginx reverse proxies, and multi-stage Docker containerization.",
+    "query_skills": ["Vue.js", "Laravel", "PHP", "MySQL", "Docker", "Nginx"],
+    "relevant_doc_ids": ["doc_04_vue_laravel_docker"],
+    "relevant_links": ["https://www.cognizant.com/us/en/services/digital-engineering"]
+  },
+  {
+    "test_id": "eval_05",
+    "title": "Mobile Field-Service Application Engineer",
+    "job_text": "Looking for a Mobile Engineer with 4 years of experience building offline-first workforce inspection apps. You should be comfortable with React Native cross-platform UI, native iOS Swift and Android Kotlin hardware bridges, encrypted SQLite offline storage, and Firebase Firestore synchronization.",
+    "query_skills": ["React Native", "Swift", "Kotlin", "SQLite", "Firebase"],
+    "relevant_doc_ids": ["doc_05_mobile_native_cross"],
+    "relevant_links": ["https://www.infosys.com/services/digital-experience.html"]
+  },
+  {
+    "test_id": "eval_06",
+    "title": "Applied Machine Learning Engineer (Forecasting & Vision)",
+    "job_text": "Hiring an Applied ML Engineer (3-5 years experience) to build manufacturing defect classification and SKU demand forecasting pipelines. Required skills include Python, PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy, temporal validation splits, and model drift monitoring.",
+    "query_skills": ["Python", "PyTorch", "TensorFlow", "Scikit-learn", "Pandas", "NumPy"],
+    "relevant_doc_ids": ["doc_06_ml_pytorch_cv_nlp"],
+    "relevant_links": ["https://www.accenture.com/us-en/services/applied-intelligence-index"]
+  },
+  {
+    "test_id": "eval_07",
+    "title": "Enterprise Java & Core Banking Integration Engineer",
+    "job_text": "We are looking for a Senior Java Engineer (6+ years experience) to connect legacy ERP and core banking databases with external partner APIs. Stack: Java, Spring Boot, Hibernate / Spring Data JPA, Oracle Database clusters, Apache Kafka event streams, and JUnit Testcontainers.",
+    "query_skills": ["Java", "Spring Boot", "Hibernate", "Oracle", "Kafka"],
+    "relevant_doc_ids": ["doc_07_java_spring_enterprise"],
+    "relevant_links": ["https://www.tcs.com/digital-transformation-services"]
+  },
+  {
+    "test_id": "eval_08",
+    "title": "Senior .NET & Azure Cloud Modernization Engineer",
+    "job_text": "Seeking a Cloud Backend Engineer with 5 years of experience migrating healthcare claims adjudication workloads onto Microsoft Azure. Must have deep expertise in C#, ASP.NET Core, Entity Framework Core, Azure SQL Server, Azure Service Bus, Azure Key Vault, and Azure DevOps CI/CD.",
+    "query_skills": ["C#", "ASP.NET Core", "SQL Server", "Azure", "Entity Framework", "Azure DevOps"],
+    "relevant_doc_ids": ["doc_08_dotnet_azure_cloud"],
+    "relevant_links": ["https://www.capgemini.com/solutions/digital-services/"]
+  },
+  {
+    "test_id": "eval_09",
+    "title": "Distributed Logistics Platform & Mobile Engineer",
+    "job_text": "We are expanding our last-mile delivery dispatch backend and courier mobile app. Seeking 4+ years of experience with Go (Golang) microservices, gRPC, Kubernetes with Helm autoscaling, and cross-platform mobile development in Flutter and Dart.",
+    "query_skills": ["Go", "Golang", "Kubernetes", "gRPC", "Helm", "Flutter", "Dart"],
+    "relevant_doc_ids": ["doc_09_go_kubernetes_flutter"],
+    "relevant_links": ["https://www.wipro.com/digital/"]
+  },
+  {
+    "test_id": "eval_10",
+    "title": "Observability & Big Data Telemetry Architect",
+    "job_text": "Looking for a Data & SRE Observability Engineer (5 years experience) to unify distributed telecom microservice logs and historical usage batch analytics. Stack includes Elasticsearch, Logstash, Kibana, Hadoop, Apache Spark, Kafka, and automated index lifecycle management.",
+    "query_skills": ["Elasticsearch", "Logstash", "Kibana", "Hadoop", "Spark", "Kafka"],
+    "relevant_doc_ids": ["doc_10_elk_bigdata_observability"],
+    "relevant_links": ["https://www.hcltech.com/digital-analytics-services"]
+  },
+  {
+    "test_id": "eval_11",
+    "title": "Generative AI & RAG Systems Engineer",
+    "job_text": "Hiring an AI Engineer (2-4 years experience) to build production Retrieval-Augmented Generation assistants and automated outreach pipelines. Experience with LangChain LCEL, ChromaDB vector databases, sentence-transformer embeddings, Llama 3 / Groq inference, Python, and Streamlit UIs required.",
+    "query_skills": ["LangChain", "ChromaDB", "Llama 3", "Groq", "Streamlit", "RAG"],
+    "relevant_doc_ids": ["doc_11_llm_rag_langchain"],
+    "relevant_links": ["https://www.guruji-ai.com/portfolio/llm-rag-automation"]
+  },
+  {
+    "test_id": "eval_12",
+    "title": "Senior Cloud Data & Analytics Engineer",
+    "job_text": "Seeking a Data Engineer with 4+ years of experience replacing legacy batch cron scripts with governed cloud lakehouse pipelines. Required stack: SQL, Snowflake, Apache Airflow DAG orchestration, dbt transformations and freshness tests, AWS S3, Terraform, and Python.",
+    "query_skills": ["SQL", "Snowflake", "Apache Airflow", "dbt", "AWS", "Terraform"],
+    "relevant_doc_ids": ["doc_12_data_engineering_cloud"],
+    "relevant_links": ["https://www.guruji-ai.com/portfolio/cloud-data-engineering"]
+  },
+  {
+    "test_id": "eval_13",
+    "title": "Paraphrased Query: JVM Microservices & Relational Ledger",
+    "job_text": "Enterprise financial modernization engagement requiring 5+ years designing resilient JVM REST microservices, ORM persistence layers over enterprise relational clusters, event-driven message brokers with dead-letter queues, and distributed tracing.",
+    "query_skills": ["JVM microservices", "ORM relational database", "event-driven message broker", "enterprise financial integration"],
+    "relevant_doc_ids": ["doc_07_java_spring_enterprise"],
+    "relevant_links": ["https://www.tcs.com/digital-transformation-services"]
+  },
+  {
+    "test_id": "eval_14",
+    "title": "Paraphrased Query: Semantic Document Search & Small Language Models",
+    "job_text": "Looking for an engineer with 3 years experience building grounded knowledge assistants using dense text embeddings, vector stores with recursive text chunking, open-weight LLM orchestration chains, and rapid interactive web prototypes.",
+    "query_skills": ["dense embeddings vector store", "recursive chunking RAG", "open-weight LLM orchestration", "interactive Python prototype"],
+    "relevant_doc_ids": ["doc_11_llm_rag_langchain"],
+    "relevant_links": ["https://www.guruji-ai.com/portfolio/llm-rag-automation"]
+  },
+  {
+    "test_id": "eval_15",
+    "title": "Multi-Domain: AI Platform & Deep Learning Engineer",
+    "job_text": "Join our applied intelligence team (4 years experience) combining custom PyTorch neural classification models and scikit-learn feature pipelines with LangChain RAG workflows, ChromaDB vector retrieval, and Streamlit evaluation dashboards.",
+    "query_skills": ["PyTorch", "Scikit-learn", "LangChain", "ChromaDB", "Streamlit", "Python"],
+    "relevant_doc_ids": ["doc_06_ml_pytorch_cv_nlp", "doc_11_llm_rag_langchain"],
+    "relevant_links": [
+      "https://www.accenture.com/us-en/services/applied-intelligence-index",
+      "https://www.guruji-ai.com/portfolio/llm-rag-automation"
+    ]
+  },
+  {
+    "test_id": "eval_16",
+    "title": "Multi-Domain: Python Backend & Cloud Data Pipeline Engineer",
+    "job_text": "Seeking a Senior Data & Backend Engineer (5 years experience) to maintain high-concurrency Django REST and PostgreSQL/Redis operational services alongside Apache Airflow, dbt, and Snowflake analytical warehouse pipelines on AWS.",
+    "query_skills": ["Python", "Django", "PostgreSQL", "Redis", "Snowflake", "Apache Airflow", "dbt"],
+    "relevant_doc_ids": ["doc_02_python_django_backend", "doc_12_data_engineering_cloud"],
+    "relevant_links": [
+      "https://www.thoughtworks.com/clients",
+      "https://www.guruji-ai.com/portfolio/cloud-data-engineering"
+    ]
+  }
+]
