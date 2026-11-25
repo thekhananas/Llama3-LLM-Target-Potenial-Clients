@@ -1,0 +1,31 @@
+{
+  "evaluated_at_utc": "2026-11-25T20:13:21.746935+00:00",
+  "dataset_path": "eval/test_dataset.json",
+  "num_queries": 16,
+  "corpus": {
+    "collection_name": "portfolio_docs",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-V2 (Chroma ONNXMiniLM_L6_V2)",
+    "distance_space": "cosine",
+    "chunk_size": 500,
+    "chunk_overlap": 80,
+    "num_documents": 12,
+    "num_chunks": 38
+  },
+  "metrics": {
+    "recall_at_1": 0.9375,
+    "recall_at_3": 1.0,
+    "recall_at_5": 1.0,
+    "hit_rate_at_1": 1.0,
+    "hit_rate_at_3": 1.0,
+    "hit_rate_at_5": 1.0,
+    "mrr": 1.0
+  },
+  "retrieval_latency_ms": {
+    "count": 16,
+    "mean_ms": 525.7,
+    "min_ms": 306.5,
+    "p50_ms": 548.18,
+    "p95_ms": 695.81,
+    "max_ms": 707.08
+  }
+}

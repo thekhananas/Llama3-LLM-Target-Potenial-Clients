@@ -1,0 +1,76 @@
+{
+  "evaluated_at_utc": "2026-11-25T20:25:45.140572+00:00",
+  "dataset_path": "eval/test_dataset.json",
+  "num_cases": 16,
+  "num_succeeded": 16,
+  "llm_model": "openai/gpt-oss-20b",
+  "corpus": {
+    "collection_name": "portfolio_docs",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-V2 (Chroma ONNXMiniLM_L6_V2)",
+    "distance_space": "cosine",
+    "chunk_size": 500,
+    "chunk_overlap": 80,
+    "num_documents": 12,
+    "num_chunks": 38
+  },
+  "extraction_metrics": {
+    "json_validity_rate": 1.0
+  },
+  "e2e_retrieval_metrics": {
+    "recall_at_1": 0.9375,
+    "recall_at_3": 1.0,
+    "mrr": 1.0
+  },
+  "generation_quality": {
+    "mean_deterministic_rubric_score": 1.0,
+    "subject_present_rate": 1.0,
+    "under_150_words_rate": 1.0,
+    "persona_present_rate": 1.0,
+    "retrieved_link_grounded_rate": 1.0,
+    "relevant_link_grounded_rate": 1.0,
+    "mean_word_count": 100.56,
+    "mean_job_email_cosine_similarity": 0.7774,
+    "llm_judge": {
+      "judge_model": "openai/gpt-oss-120b",
+      "num_scored": 5,
+      "mean_relevance_1_to_5": 4.8,
+      "mean_groundedness_1_to_5": 3.4,
+      "mean_clarity_1_to_5": 4.4,
+      "mean_overall_1_to_5": 4.0
+    }
+  },
+  "latency_ms": {
+    "extract_jobs": {
+      "count": 16,
+      "mean_ms": 7399.44,
+      "min_ms": 567.73,
+      "p50_ms": 7799.74,
+      "p95_ms": 12817.78,
+      "max_ms": 12939.93
+    },
+    "retrieval": {
+      "count": 16,
+      "mean_ms": 673.05,
+      "min_ms": 416.21,
+      "p50_ms": 634.25,
+      "p95_ms": 1007.26,
+      "max_ms": 1442.94
+    },
+    "generation": {
+      "count": 16,
+      "mean_ms": 4872.82,
+      "min_ms": 1411.21,
+      "p50_ms": 5871.52,
+      "p95_ms": 7418.5,
+      "max_ms": 7779.07
+    },
+    "end_to_end": {
+      "count": 16,
+      "mean_ms": 12949.78,
+      "min_ms": 2685.42,
+      "p50_ms": 14747.86,
+      "p95_ms": 19402.85,
+      "max_ms": 20769.94
+    }
+  }
+}
